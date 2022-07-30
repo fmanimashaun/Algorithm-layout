@@ -36,11 +36,16 @@
 }
 
 /*Universal styling*/
+body {
+    margin: 0;
+    padding: 0;
+}
 Img {
     width: 100%;
     height: auto;
 }
 
+/*creating a stack container*/
 .container {
     padding: var(--s1);
     min-height: 100vh;
@@ -50,6 +55,8 @@ Img {
     line-height: 1.5;
 }
 
+
+/*creating a content wrapper to control the max-width of content*/
 .search {
     display: block;
     box-sizing: content-box;
@@ -58,16 +65,19 @@ Img {
     color: #202124;
 }
 
+/* adding consistent spacing between adjacent elements*/
 .search>*+* {
     margin-block-start: 1.5rem;
 }
 
+/*Sizing the logo in relation to the parent element*/
 img.search__img {
     display: block;
     margin-inline: auto;
     max-inline-size: 50%;
 }
 
+/*Styling the input container*/
 .search__input {
     display: block;
     inline-size: 100%;
@@ -78,6 +88,7 @@ img.search__img {
     border-radius: 50%;
 }
 
+/*Styling the input field*/
 .seacrh__input__field {
     display: block;
     inline-size: 100%;
@@ -97,7 +108,7 @@ img.search__img {
 }
 
 
-
+/*Styling the search button wrapper and language option wrapper*/
 .search__lang__opt,
 .search__button-wrap {
     width: 100%;
@@ -107,10 +118,12 @@ img.search__img {
     font-size: var(--s-1);
 }
 
-.search__button-wrap *+* {
+/*Adding consistent spacing between adjacent element*/
+.search__button-wrap *+*, .search__lang__opt *+* {
     margin-inline-start: var(--s-1);
 }
 
+/*Styling the the button*/
 .search__button {
     font-size: var(--s-1);
     padding-inline: 1em;
@@ -131,15 +144,12 @@ img.search__img {
     border-color:blue;   
 }
 
+/*Styling the language option wrapper*/
 .search__lang__opt__disc {
     margin: 0;
     flex-basis: content;
     margin-inline-end: var(--s-1);
 
-}
-
-.search__lang__opt *+* {
-    margin-inline-start: var(--s-1);
 }
 
 
@@ -150,4 +160,9 @@ img.search__img {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+}
+
+
+.search__lang_opt__list a {
+    text-decoration: none;
 }
